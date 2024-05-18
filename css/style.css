@@ -4,16 +4,16 @@
 
 body {
     display: grid; 
-    grid-template-columns: 66% 33%; 
-    grid-template-rows: 10% 6% 10% 64% 10%; 
+    grid-template-columns: minmax(845px, 66%) minmax(422px, 33%); 
+    grid-template-rows: minmax(58px, 8%) minmax(58px, 8%) minmax(72px, 10%) minmax(475px, 66%) minmax(58px, 8%); 
     grid-template-areas: 
         "Header Header"
         "Nav Nav"
         "Settings Settings"
         "Course Stats"
         "Footer Footer";
-    height: 100vh;
-    width: 100vw;
+    height: 720px;
+    width: 1280px;
 }
 
 .hide {
@@ -80,11 +80,12 @@ h1 {
 
 /* Console Header */
 #console-column {
-    height: inherit;
+    height: 100%;
     display: flex;
     flex-direction: column;
     flex: 1;
     flex-basis: 100%;
+    justify-content: space-around;
 }
 
 .console-image img {
@@ -109,6 +110,12 @@ h1 {
 }
 
 /* Course Grid */
+#thumbnail-grid {
+    max-height: 100%;
+    overflow: hidden;
+    margin: 0;
+    border: 5px solid blue;
+}
 .course-thumbnail img {
     cursor: pointer;
     display: block;
