@@ -1,8 +1,11 @@
+* {
+    margin: 0;
+}
+
 body {
     display: grid; 
     grid-template-columns: 66% 33%; 
-    grid-template-rows: 10% 10% 10% 60% 10%; 
-    gap: 1% 1%; 
+    grid-template-rows: 10% 6% 10% 64% 10%; 
     grid-template-areas: 
         "Header Header"
         "Nav Nav"
@@ -10,6 +13,7 @@ body {
         "Course Stats"
         "Footer Footer";
     height: 100vh;
+    width: 100vw;
 }
 
 .hide {
@@ -39,8 +43,8 @@ h1 {
 .Course {
     display: grid; 
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
-    grid-template-rows: 10% repeat(3, minmax(0, 1fr)); 
-    gap: 5% 5%; 
+    grid-template-rows: 15% repeat(3, minmax(0, 1fr)); 
+    gap: 1% 1%; 
     grid-template-areas: 
         ". . . Class Class"
         "Console Thumbnail Thumbnail Thumbnail Thumbnail"
@@ -48,8 +52,6 @@ h1 {
         "Console Thumbnail Thumbnail Thumbnail Thumbnail"; 
     grid-area: Course; 
     background: brown;
-    gap: var(--gap);
-    height: 100%;
 }
 .Console {
     grid-area: Console;
@@ -111,10 +113,9 @@ h1 {
     cursor: pointer;
     display: block;
     opacity: 80%;
-    max-width: 90%;
+    max-width: 100%;
     transition: transform 250ms ease-in-out;
     border: 5px solid transparent;
-    margin: 5% auto;
 
     &:hover {
         opacity: 100%;
@@ -126,10 +127,10 @@ h1 {
     border: 5px solid salmon;
     background-color: salmon;
     opacity: 100%;
-    mask-image: linear-gradient(135deg, transparent 5px, gold 0),
-                linear-gradient(-135deg, transparent 5px, gold 0),
-                linear-gradient(45deg, transparent 5px, gold 0),
-                linear-gradient(-45deg, transparent 5px, gold 0);
+    mask-image: linear-gradient(135deg, transparent 4%, gold 0),
+                linear-gradient(-135deg, transparent 4%, gold 0),
+                linear-gradient(45deg, transparent 4%, gold 0),
+                linear-gradient(-45deg, transparent 4%, gold 0);
     mask-position: 0 0, 100% 0, 0 100%, 100% 100%;
     mask-repeat: no-repeat;
     mask-size: 51% 51%;

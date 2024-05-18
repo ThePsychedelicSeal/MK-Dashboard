@@ -1,7 +1,5 @@
-let a = document.querySelector('console-container');
-
 function snesCourses(){
-    document.getElementById('snesCourses').style.display = 'grid'; 
+    document.getElementById('snesCourses').style.display = 'grid';
     document.getElementById('snesCourses').style.gridTemplateColumns = "repeat(5, 1fr)"; 
     document.getElementById('snesCourses').style.gridTemplateRows = "repeat(5, 1fr)"; 
     document.getElementById('n64Courses').style.display = 'none';
@@ -98,8 +96,6 @@ function mk7Courses(){
     document.getElementById('dsCourses').style.display = 'none';
     document.getElementById('wiiCourses').style.display = 'none';
     document.getElementById('mk7Courses').style.display = 'grid';
-    document.getElementById('mk7Courses').style.gridTemplateColumns = "repeat(5, 1fr)"; 
-    document.getElementById('mk7Courses').style.gridTemplateRows = "repeat(5, 1fr)"; 
     document.getElementById('tourCourses').style.display = 'none';
     document.getElementById('mk8Courses').style.display = 'none';
     document.getElementById('boosterCourses').style.display = 'none';
@@ -129,9 +125,9 @@ function mk8Courses(){
     document.getElementById('wiiCourses').style.display = 'none';
     document.getElementById('mk7Courses').style.display = 'none';
     document.getElementById('tourCourses').style.display = 'none';
-    document.getElementById('mk8Courses').style.display = 'grid';
-    document.getElementById('mk8Courses').style.gridTemplateColumns = "repeat(5, 1fr)"; 
-    document.getElementById('mk8Courses').style.gridTemplateRows = "repeat(5, 1fr)"; 
+    document.getElementById('mk8Courses').style.display = 'flex';
+    document.getElementById('mk8Courses').style.flexWrap = 'wrap';
+    document.getElementById('mk8Courses').style.justifyContent = 'space-around';
     document.getElementById('boosterCourses').style.display = 'none';
 }
 
