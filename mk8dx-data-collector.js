@@ -1,4 +1,4 @@
-function snesCourses(){
+/* function snesCourses(){
     document.getElementById('snesCourses').style.display = 'grid';
     document.getElementById('snesCourses').style.gridTemplateColumns = 'repeat(5, 1fr)'; 
     document.getElementById('snesCourses').style.gridTemplateRows = 'repeat(5, 1fr)'; 
@@ -128,7 +128,7 @@ function mk8Courses(){
     document.getElementById('mk7Courses').style.display = 'none';
     document.getElementById('tourCourses').style.display = 'none';
     document.getElementById('mk8Courses').style.display = 'grid';
-    document.getElementById('mk8Courses').style.gridTemplateColumns = 'repeat(5, 18%)'; 
+    document.getElementById('mk8Courses').style.gridTemplateColumns = 'repeat(5, 15%)'; 
     document.getElementById('mk8Courses').style.gridautoRows = 'repeat(5, 18%)';
     document.getElementById('mk8Courses').style.gap = '15px';
     document.getElementById('boosterCourses').style.display = 'none';
@@ -147,4 +147,4 @@ function boosterCourses(){
     document.getElementById('boosterCourses').style.display = 'grid';
     document.getElementById('boosterCourses').style.gridTemplateColumns = 'repeat(5, 1fr)';
     document.getElementById('boosterCourses').style.gridTemplateRows = 'repeat(5, 1fr)'; 
-}
+} */
