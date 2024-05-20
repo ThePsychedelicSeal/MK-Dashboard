@@ -12,8 +12,8 @@ body {
         "Settings Settings"
         "Course Stats"
         "Footer Footer";
-    height: 720px;
-    width: 1280px;
+    height: 100vh;
+    width: 100vw;
 }
 
 input[type="radio"]{
@@ -38,14 +38,15 @@ h1 {
 }
 .Course {
     display: grid; 
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
-    grid-template-rows: 15% repeat(3, minmax(0, 1fr)); 
+    height: 100%;
+    grid-template-columns: 40% 1fr 1fr 1fr; 
+    grid-template-rows: 15% repeat(3,1fr); 
     gap: 1% 1%; 
     grid-template-areas: 
-        ". . . Class Class"
-        "Console Thumbnail Thumbnail Thumbnail Thumbnail"
-        "Console Thumbnail Thumbnail Thumbnail Thumbnail"
-        "Console Thumbnail Thumbnail Thumbnail Thumbnail"; 
+        ". . Class Class"
+        "Console Thumbnail Thumbnail Thumbnail"
+        "Console Thumbnail Thumbnail Thumbnail"
+        "Console Thumbnail Thumbnail Thumbnail"; 
     grid-area: Course; 
     background: brown;
 }
@@ -78,11 +79,9 @@ h1 {
 #console-column {
     height: 100%;
     display: grid;
-    flex-direction: column;
-    flex: 1;
-    flex-basis: 100%;
+    grid-template-columns: repeat(2,1fr);
     justify-content: space-around;
-    margin: auto;
+    align-items: center;
 }
 
 .console-image img {
@@ -111,20 +110,14 @@ h1 {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5,1fr);
-    width: 94%;
-    height: 94%;
     background-color: cyan;
+    margin: auto;
     padding: 1.5%;
     grid-gap: 3%;
-    margin: auto;
-}
-
-.course-container > div {
-    display: flex;
-    background: red;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
+
 
 .course-container > div img {
     max-width: calc(100% - 10px);
@@ -136,7 +129,7 @@ h1 {
         transition: opacity 100ms ease-in-out;
     }
 }
-.course-container input[type=radio]:checked + img{
+.course-container input[type=radio]:checked + label > img {
     border: 5px solid salmon;
     background-color: salmon;
     opacity: 100%;
