@@ -108,6 +108,8 @@ h1 {
 /* Course Grid */
 .course-container {
     display: grid;
+    max-height: 5fr;
+    width: 5fr;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5,1fr);
     background-color: cyan;
@@ -118,9 +120,10 @@ h1 {
     align-items: center;
 }
 
-
 .course-container > div img {
+    display: block;
     max-width: calc(100% - 10px);
+    max-height: 1fr;
     opacity: 80%;
     border: 5px solid transparent;
 
