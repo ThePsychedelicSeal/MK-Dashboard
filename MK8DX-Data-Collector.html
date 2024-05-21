@@ -7,22 +7,78 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="header">Header</div>
-    <div class="nav">Nav</div>
+    <div class="header">
+        <div class="logo">MK Dashboard</div>
+        <div class="nav">
+            <ul class="header-item"><a href="index.html">Home</a></ul>
+            <ul class="header-item"><a href="about.html">About</a></ul>
+            <ul class="header-item"><a href="MK8DX-Data-Collector.html">MK8DX Data Collector</a></ul>
+            <ul class="header-item"><a href="stats.html">Stats</a></ul>
+        </div>
+        <div class="login">
+            <div class="login-icon">Log In</div>
+            <div class="signup-icon">Sign Up</div>
+        </div>
+    </div>
+    <div class="title">Mario Kart 8 Deluxe Data Collector</div>
     <form class="content">
-            <div class="settings">Settings</div>
-                <div class="console">
-                    <div class="console-select">SNES</div>
-                    <div class="console-select">N64</div>
-                    <div class="console-select">GBA</div>
-                    <div class="console-select">GCN</div>
-                    <div class="console-select">DS</div>
-                    <div class="console-select">Wii</div>
-                    <div class="console-select">MK7</div>
-                    <div class="console-select">Tour</div>
-                    <div class="console-select">MK8</div>
-                    <div class="console-select">Booster</div>
+            <div class="console">
+                <div class="console-select">
+                    <label class="console-select">
+                        <img src="/images/logos/Super-Mario-Kart.png" alt="Super Mario Kart">
+                        <input type="radio" name="console" id="snes-logo" value="SNES">
+                    </label>
                 </div>
+                <label class="console-select">
+                    <img src="/images/logos/Mario-Kart-64.png" alt="Mario Kart 64">
+                    <input type="radio" name="console" id="n64-logo" value="N64">
+                </label>
+                <label class="console-select">
+                    <img src="images/logos/Mario-Kart-Super-Circuit.png" alt="Mario Kart Super Circuit">
+                    <input type="radio" name="console" id="gba-logo" value="GBA">
+                </label>
+                <label class="console-select">
+                    <img src="images/logos/Mario-Kart-Double-Dash.png" alt="Mario Kart Double Dash">
+                    <input type="radio" name="console" id="gcn-logo" value="GCN">
+                </label>
+                <label class="console-select">
+                    <img src="images/logos/Mario-Kart-DS.png" alt="Mario Kart DS">
+                    <input type="radio" name="console" id="ds-logo" value="DS">
+                </label>
+                <label class="console-select">
+                    <img src="images/logos/Mario-Kart-Wii.png" alt="Mario Kart Wii">
+                    <input type="radio" name="console" id="wii-logo" value="Wii">
+                </label>
+                <label class="console-select">
+                    <img src="images/logos/Mario-Kart-7.png" alt="Mario Kart 7">
+                    <input type="radio" name="console" id="mk7-logo" value="MK7">
+                </label>
+                <label class="console-select">
+                    <img src="images/logos/Mario-Kart-Tour.png" alt="Mario Kart Tour">
+                    <input type="radio" name="console" id="tour-logo" value="Tour">
+                </label>
+                <label class="console-select">
+                    <img src="images/logos/Mario-Kart-8.png" alt="Mario Kart 8">
+                    <input type="radio" name="console" id="mk8-logo" value="MK8">
+                </label>
+                <label class="console-select">
+                    <img src="images/logos/Mario-Kart-8-Deluxe-Booster-Course-Pass.png" alt="Mario Kart 8 Deluxe Booster Courses">
+                    <input type="radio" name="console" id="booster-logo" value="Booster">
+                </label>
+            </div>
+            <div class="class">
+                <div class="class-select">1</div>
+                <div class="class-select">M</div>
+                <div class="class-select">2</div>
+            </div>
+            <div class="date">Date</div>
+            <div class="build">
+                <div class="character-select">C</div>
+                <div class="vehicle-select">V</div>
+                <div class="tire-select">T</div>
+                <div class="glider-select">G</div>
+            </div>
+            <div class="settings">Settings</div>
             <div class="course">
                 <div class="thumbnail-select snesCourse">SNES 1</div>
                 <div class="thumbnail-select snesCourse">SNES 2</div>
@@ -49,11 +105,6 @@
                 <div class="thumbnail-select gcnCourse">GCN 5</div>
                 <div class="thumbnail-select gcnCourse">GCN 6</div>
                 <div class="thumbnail-select gcnCourse">GCN 7</div>
-            </div>
-            <div class="class">
-                <div class="class-select">1</div>
-                <div class="class-select">M</div>
-                <div class="class-select">2</div>
             </div>
             <div class="stats">
                 <div class="position1">
@@ -97,6 +148,11 @@
             </div>
             <div class="submit">Submit</div>
         </form>
-        <div class="footer">Footer</div>
+        <div class="footer">
+            <div class="copyright">Copyright</div>
+            <div class="suggestions">Suggestions</div>
+            <div class="coffee">Coffee</div>
+            <div class="github">GitHub</div>
+        </div>
 </body>
 </html>

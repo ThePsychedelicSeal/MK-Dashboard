@@ -1,15 +1,19 @@
 body {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
-    grid-template-rows: 80px 80px minmax(0, 1fr) 80px;
+    grid-template-rows: 120px 50px minmax(0, 1fr) 80px;
     grid-template-areas: 
         "header"
-        "nav"
+        "title"
         "content"
         "footer";
     width: 95vw;
     height: 95vh;
     gap: .5em;
+}
+
+input[type=radio] {
+    display: none;
 }
 
 form {
@@ -18,7 +22,7 @@ form {
     padding:0;
 }
 
-.header, .nav, .content, .footer {
+.header, .title, .content, .footer {
     background-color: steelblue;
     font-size: 20px;
     padding: 20px;
@@ -27,68 +31,135 @@ form {
 
 .header {
     grid-area: header;
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-auto-rows: minmax(0, 1fr);
+    grid-template-areas: 
+    "logo nav login";
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo, .nav, .login {
+    background-color: gray;
+    font-size: 20px;
+    border: 5px solid darkgray;
+}
+
+.logo {
+    grid-area: logo;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
 }
 
 .nav {
     grid-area: nav;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.nav ul {
+    background-color: burlywood;
+    padding: 5px;
+    font-size: 20px;
+    border: 5px solid brown;
+}
+
+.login {
+    grid-area: login;
+    width: auto;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 1em;
+}
+
+.login [class$="-icon"] {
+    background-color: olivedrab;
+    font-size: 20px;
+    padding: 10px;
+    border: 5px solid olive;
+}
+
+.title {
+    grid-area: title;
+    display: flex;
+    justify-content: start;
+    align-items: center;
 }
 
 .content {
     grid-area: content;
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr) minmax(0, 1fr) minmax(0, 2fr);
-    grid-template-rows: 1fr minmax(0, 9fr);
+    grid-template-columns: minmax(0, 1fr) minmax(0, 4fr) repeat(2, minmax(0, 2fr)) minmax(0, 1fr);
+    grid-template-rows: 1fr minmax(0, 9fr) 1fr;
     grid-template-areas: 
-        "settings settings settings settings"
-        "console course course stats"
-        "console . class submit";
+        "console build class date settings"
+        "console course course stats stats"
+        "console course course submit submit";
     gap: 1em;
     height: 1fr;
 }
 
-.settings, .console, .course, .stats, .class, .submit {
+.build, .date, .console, .course, .stats, .class, .submit, .session, .settings{
     background-color: darksalmon;
     font-size: 20px;
-    padding: 20px;
+    padding: .25em;
     border: 5px solid salmon;
-}
-
-
-.settings {
-    grid-area: settings;
 }
 
 .console {
     grid-area: console;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(10,1fr);
+    grid-template-rows: repeat(10,minmax(0, 1fr));
     justify-content: space-around;
-    gap: 1em;
+    gap: .25em;
     height: 1fr;
 }
 
 .console-select {
-    background-color: teal;
-    font-size: 20px;
-    padding: 10px;
-    border: 5px solid cyan;
+    padding: 0px;
     height: 1fr;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.course {
-    grid-area: course;
+.console-select img {
+    object-fit: contain;
+    width: 90%;
+    height: 100%;
+    opacity: 50%;
+    display: block;
+
+    &:hover {
+        opacity: 100%;
+        transition: opacity 250ms;
+    }
+}
+
+.console input[type=radio]:checked + label > img {
+    border: 5px solid gold;
+}
+
+.build {
+    grid-area: build;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 1em;
 }
 
-.thumbnail-select {
-    background-color: yellowgreen;
+.build > div[class$="-select"] {
+    background-color: darkseagreen;
     font-size: 20px;
     padding: 10px;
-    border: 5px solid forestgreen;
+    border: 5px solid seagreen;
 }
 
 .class {
@@ -105,11 +176,30 @@ form {
     border: 5px solid gold;
 }
 
+.date {
+    grid-area: date;
+}
+
+.course {
+    grid-area: course;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-rows: repeat(5, minmax(0, 1fr));
+    gap: 1em;
+}
+
+.thumbnail-select {
+    background-color: yellowgreen;
+    font-size: 20px;
+    padding: 10px;
+    border: 5px solid forestgreen;
+}
+
 .stats {
     grid-area: stats;
     display: grid;
     grid-template-columns: minmax(0, 1fr);
-    grid-template-rows: 3fr 1fr 3fr 1fr;
+    grid-template-rows: repeat(2, minmax(0, 2fr) minmax(0, 1fr));
     gap: 1em;
 }
 
@@ -123,20 +213,21 @@ div[class*="position"], div[class*="points"] {
 div[class*="position"] {
     display: grid;
     grid-template-columns: repeat(6, minmax(0, 1fr));
-    grid-auto-rows: auto;
+    grid-auto-rows: minmax(0, 1fr);
     gap: 1em;
 }
 
 div[class*="points"] {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-auto-rows: minmax(0, 1fr);
     gap: 1em;
 }
 
 div[class*="position-select"],div[class*="points-select"] {
     background-color: pink;
     font-size: 20px;
-    padding: 10px;
+    padding: 0;
     border: 5px solid magenta;
 }
 
@@ -146,4 +237,15 @@ div[class*="position-select"],div[class*="points-select"] {
 
 .footer {
     grid-area: footer;
+    display: grid;
+    grid-template-columns: repeat(2, 3fr) 1fr 1fr;
+    grid-template-areas: 
+    "copyright suggestions coffee github";
+    gap: 1em;
+}
+
+.copyright, .suggestions, .coffee, .github {
+    background-color: aquamarine;
+    font-size: 20px;
+    border: 5px solid aqua;
 }
