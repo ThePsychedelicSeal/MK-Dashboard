@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+}
+
+body {
+    display: grid; 
+    grid-template-columns: minmax(845px, 66%) minmax(422px, 33%); 
+    grid-template-rows: minmax(58px, 8%) minmax(58px, 8%) minmax(72px, 10%) minmax(475px, 66%) minmax(58px, 8%); 
+    grid-template-areas: 
+        "Header Header"
+        "Nav Nav"
+        "Settings Settings"
+        "Course Stats"
+        "Footer Footer";
+    height: 720px;
+    width: 1280px;
+    object-fit: contain;
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+h1 {
+    text-align: center;
+    font-size: 16px;
+}
+.Header { 
+    grid-area: Header; 
+    background: teal;
+}
+.Nav { 
+    grid-area: Nav; 
+    background: salmon;
+}
+.Settings { 
+    grid-area: Settings; 
+    background: yellowgreen;
+}
+.Course {
+    display: grid; 
+    height: 100%;
+    grid-template-columns: 40% 1fr 1fr 30%; 
+    grid-template-rows: 15% repeat(3,1fr); 
+    gap: 1vw 1vh; 
+    grid-template-areas: 
+        ". . . Class"
+        "Console Thumbnail Thumbnail Thumbnail"
+        "Console Thumbnail Thumbnail Thumbnail"
+        "Console Thumbnail Thumbnail Thumbnail"; 
+    grid-area: Course; 
+    background: brown;
+}
+.Console {
+    grid-area: Console;
+    border: 5px solid #000000;
+    border-radius: 10px;
+    align-content: center;
+}
+.Class { 
+    grid-area: Class; 
+    background: blue;
+}
+.Thumbnail { 
+    grid-area: Thumbnail; 
+    background: purple;
+    border: 5px solid #000000;
+    border-radius: 10px;
+}
+.Stats { 
+    grid-area: Stats; 
+    background: orange;
+}
+.Footer { 
+    grid-area: Footer; 
+    background: green;
+}
+
+/* Console Header */
+.class-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    background-color: blueviolet;
+    padding: 1.5vw 1.5vh;
+    gap: 3vw 3vh;
+    border: 5px solid black;
+    align-items: center;
+}
+
+.class-icon img {
+    cursor: pointer;
+    display: block;
+    opacity: 50%;
+    transition: transform 250ms ease-in-out;
+    max-width: 100%;
+    margin: auto;
+
+    &:hover {
+        opacity: 80%;
+        transition: opacity 250ms ease-in-out;
+    }
+}
+
+.class-container input[type=radio]:checked + label > img {
+    filter: drop-shadow(0px 0px 10px hsla(0, 0%, 0%, 0.75));
+    opacity: 100%;
+}
+
+#console-column {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: space-around;
+    align-items: center;
+}
+
+.console-image img {
+    cursor: pointer;
+    display: block;
+    opacity: 50%;
+    transition: transform 250ms ease-in-out;
+    max-width: 70%;
+    margin: auto;
+
+    &:hover {
+        opacity: 80%;
+        transition: opacity 250ms ease-in-out;
+    }
+}
+
+#console-column input[type=radio]:checked + .console-image img{
+    opacity: 100%;
+    transform: scale(1.1);
+    filter: drop-shadow(0px 0px 10px hsla(0, 0%, 0%, 0.75));
+    transition: transform 250ms ease-in-out, filter 250ms ease-in-out;
+}
+
+/* Course Grid */
+.course-container {
+    display: grid;
+    width: inherit;
+    height: inherit;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5,1fr);
+    background-color: cyan;
+    margin: auto;
+    padding: 1.5vw 1.5vh;
+    grid-gap: 3vw 3vh;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.course-container > div img {
+    display: block;
+    max-width: calc(100% - 10px);
+    opacity: 80%;
+    border: 5px solid transparent;
+
+    &:hover {
+        opacity: 100%;
+        transition: opacity 100ms ease-in-out;
+    }
+}
+.course-container input[type=radio]:checked + label > img {
+    border: 5px solid salmon;
+    background-color: salmon;
+    opacity: 100%;
+    mask-image: linear-gradient(135deg, transparent 4%, gold 0),
+                linear-gradient(-135deg, transparent 4%, gold 0),
+                linear-gradient(45deg, transparent 4%, gold 0),
+                linear-gradient(-45deg, transparent 4%, gold 0);
+    mask-position: 0 0, 100% 0, 0 100%, 100% 100%;
+    mask-repeat: no-repeat;
+    mask-size: 51% 51%;
+}
