@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MK8DX Data Collector</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <div class="header">
         <div class="logo">MK Dashboard</div>
@@ -22,90 +24,195 @@
     </div>
     <div class="title">Mario Kart 8 Deluxe Data Collector</div>
     <form class="content">
-            <div class="console">
-                <div class="console-select">
-                    <label class="console-select">
-                        <img src="/images/logos/Super-Mario-Kart.png" alt="Super Mario Kart">
-                        <input type="radio" name="console" id="snes-logo" value="SNES">
-                    </label>
-                </div>
-                <label class="console-select">
-                    <img src="/images/logos/Mario-Kart-64.png" alt="Mario Kart 64">
-                    <input type="radio" name="console" id="n64-logo" value="N64">
-                </label>
-                <label class="console-select">
-                    <img src="images/logos/Mario-Kart-Super-Circuit.png" alt="Mario Kart Super Circuit">
-                    <input type="radio" name="console" id="gba-logo" value="GBA">
-                </label>
-                <label class="console-select">
-                    <img src="images/logos/Mario-Kart-Double-Dash.png" alt="Mario Kart Double Dash">
-                    <input type="radio" name="console" id="gcn-logo" value="GCN">
-                </label>
-                <label class="console-select">
-                    <img src="images/logos/Mario-Kart-DS.png" alt="Mario Kart DS">
-                    <input type="radio" name="console" id="ds-logo" value="DS">
-                </label>
-                <label class="console-select">
-                    <img src="images/logos/Mario-Kart-Wii.png" alt="Mario Kart Wii">
-                    <input type="radio" name="console" id="wii-logo" value="Wii">
-                </label>
-                <label class="console-select">
-                    <img src="images/logos/Mario-Kart-7.png" alt="Mario Kart 7">
-                    <input type="radio" name="console" id="mk7-logo" value="MK7">
-                </label>
-                <label class="console-select">
-                    <img src="images/logos/Mario-Kart-Tour.png" alt="Mario Kart Tour">
-                    <input type="radio" name="console" id="tour-logo" value="Tour">
-                </label>
-                <label class="console-select">
-                    <img src="images/logos/Mario-Kart-8.png" alt="Mario Kart 8">
-                    <input type="radio" name="console" id="mk8-logo" value="MK8">
-                </label>
-                <label class="console-select">
-                    <img src="images/logos/Mario-Kart-8-Deluxe-Booster-Course-Pass.png" alt="Mario Kart 8 Deluxe Booster Courses">
-                    <input type="radio" name="console" id="booster-logo" value="Booster">
-                </label>
-            </div>
-            <div class="class">
-                <div class="class-select">1</div>
-                <div class="class-select">M</div>
-                <div class="class-select">2</div>
-            </div>
-            <div class="date">Date</div>
-            <div class="build">
-                <div class="character-select">C</div>
-                <div class="vehicle-select">V</div>
-                <div class="tire-select">T</div>
-                <div class="glider-select">G</div>
-            </div>
-            <div class="settings">Settings</div>
-            <div class="course">
-                <div class="thumbnail-select snesCourse">SNES 1</div>
-                <div class="thumbnail-select snesCourse">SNES 2</div>
-                <div class="thumbnail-select snesCourse">SNES 3</div>
-                <div class="thumbnail-select snesCourse">SNES 4</div>
-                <div class="thumbnail-select n64Course">N64 1</div>
-                <div class="thumbnail-select n64Course">N64 2</div>
-                <div class="thumbnail-select n64Course">N64 3</div>
-                <div class="thumbnail-select n64Course">N64 4</div>
-                <div class="thumbnail-select n64Course">N64 5</div>
-                <div class="thumbnail-select n64Course">N64 6</div>
-                <div class="thumbnail-select gbaCourse">GBA 1</div>
-                <div class="thumbnail-select gbaCourse">GBA 2</div>
-                <div class="thumbnail-select gbaCourse">GBA 3</div>
-                <div class="thumbnail-select gbaCourse">GBA 4</div>
-                <div class="thumbnail-select gbaCourse">GBA 5</div>
-                <div class="thumbnail-select gbaCourse">GBA 6</div>
-                <div class="thumbnail-select gbaCourse">GBA 7</div>
-                <div class="thumbnail-select gbaCourse">GBA 8</div>
-                <div class="thumbnail-select gcnCourse">GCN 1</div>
-                <div class="thumbnail-select gcnCourse">GCN 2</div>
-                <div class="thumbnail-select gcnCourse">GCN 3</div>
-                <div class="thumbnail-select gcnCourse">GCN 4</div>
-                <div class="thumbnail-select gcnCourse">GCN 5</div>
-                <div class="thumbnail-select gcnCourse">GCN 6</div>
-                <div class="thumbnail-select gcnCourse">GCN 7</div>
-            </div>
+        <div class="console">
+            <label class="console-select">
+                <input type="radio" name="console" id="snes-logo" value="SNES">
+                <img src="/images/logos/Super-Mario-Kart.png" alt="Super Mario Kart">
+            </label>
+            <label class="console-select">
+                <input type="radio" name="console" id="n64-logo" value="N64">
+                <img src="/images/logos/Mario-Kart-64.png" alt="Mario Kart 64">
+            </label>
+            <label class="console-select">
+                <input type="radio" name="console" id="gba-logo" value="GBA">
+                <img src="images/logos/Mario-Kart-Super-Circuit.png" alt="Mario Kart Super Circuit">
+            </label>
+            <label class="console-select">
+                <input type="radio" name="console" id="gcn-logo" value="GCN">
+                <img src="images/logos/Mario-Kart-Double-Dash.png" alt="Mario Kart Double Dash">
+            </label>
+            <label class="console-select">
+                <input type="radio" name="console" id="ds-logo" value="DS">
+                <img src="images/logos/Mario-Kart-DS.png" alt="Mario Kart DS">
+            </label>
+            <label class="console-select">
+                <input type="radio" name="console" id="wii-logo" value="Wii">
+                <img src="images/logos/Mario-Kart-Wii.png" alt="Mario Kart Wii">
+            </label>
+            <label class="console-select">
+                <input type="radio" name="console" id="mk7-logo" value="MK7">
+                <img src="images/logos/Mario-Kart-7.png" alt="Mario Kart 7">
+            </label>
+            <label class="console-select">
+                <input type="radio" name="console" id="tour-logo" value="Tour">
+                <img src="images/logos/Mario-Kart-Tour.png" alt="Mario Kart Tour">
+            </label>
+            <label class="console-select">
+                <input type="radio" name="console" id="mk8-logo" value="MK8">
+                <img src="images/logos/Mario-Kart-8.png" alt="Mario Kart 8">
+            </label>
+            <label class="console-select">
+                <input type="radio" name="console" id="booster-logo" value="Booster">
+                <img src="images/logos/Mario-Kart-8-Deluxe-Booster-Course-Pass.png"
+                    alt="Mario Kart 8 Deluxe Booster Courses">
+            </label>
+        </div>
+        <div class="class">
+            <label class="class-select">
+                <input type="radio" name="class" id="150cc" value="150cc" checked />
+                <img src="images/classes/150cc.png" alt="150cc">
+            </label>
+            <label class="class-select">
+                <input type="radio" name="class" id="150cc-mirror" value="150cc Mirror">
+                <img src="images/classes/150cc-mirror.png" alt="150cc Mirror">
+            </label>
+            <label class="class-select">
+                <input type="radio" name="class" id="200cc" value="200cc">
+                <img src="images/classes/200cc.png" alt="200cc">
+            </label>
+        </div>
+        <div class="date">Date</div>
+        <div class="build">
+            <div class="character-select">C</div>
+            <div class="vehicle-select">V</div>
+            <div class="tire-select">T</div>
+            <div class="glider-select">G</div>
+        </div>
+        <div class="settings">Settings</div>
+        <div class="course">
+            <label class="thumbnail-select snesCourse">
+                <input type="radio" name="course" id="Bowser-Castle-3" value="Bowser Castle 3">
+                <img src="images/courses/Bowser-Castle-3.png" alt="Bowser Castle 3">
+            </label>
+            <label class="thumbnail-select snesCourse">
+                <input type="radio" name="course" id="Donut-Plains-3" value="Donut Plains 3">
+                <img src="images/courses/Donut-Plains-3.png" alt="Donut Plains 3">
+            </label>
+            <label class="thumbnail-select snesCourse">
+                <input type="radio" name="course" id="Mario-Circuit-3" value="Mario Circuit 3">
+                <img src="images/courses/Mario-Circuit-3.png" alt="Mario Circuit 3">
+            </label>
+            <label class="thumbnail-select snesCourse">
+                <input type="radio" name="course" id="Rainbow-Road-SNES" value="Rainbow Road - SNES">
+                <img src="images/courses/Rainbow-Road-SNES.png" alt="Rainbow Road - SNES">
+            </label>
+            <label class="thumbnail-select n64Course">
+                <input type="radio" name="course" id="Choco-Mountain" value="Choco Mountain">
+                <img src="images/courses/Choco-Mountain.png" alt="Choco Mountain">
+            </label>
+            <label class="thumbnail-select n64Course">
+                <input type="radio" name="course" id="Kalamari-Desert" value="Kalamari Desert">
+                <img src="images/courses/Kalamari-Desert.png" alt="Kalamari Desert">
+            </label>
+            <label class="thumbnail-select n64Course">
+                <input type="radio" name="course" id="Rainbow-Road-N64" value="Rainbow Road - N64">
+                <img src="images/courses/Rainbow-Road-N64.png" alt="Rainbow Road - N64">
+            </label>
+            <label class="thumbnail-select n64Course">
+                <input type="radio" name="course" id="Royal-Raceway" value="Royal Raceway">
+                <img src="images/courses/Royal-Raceway.png" alt="Royal Raceway">
+            </label>
+            <label class="thumbnail-select n64Course">
+                <input type="radio" name="course" id="Toads-Turnpike" value="Toad's Turnpike">
+                <img src="images/courses/Toads-Turnpike.png" alt="Toad's Turnpike">
+            </label>
+            <label class="thumbnail-select n64Course">
+                <input type="radio" name="course" id="Yoshi-Valley" value="Yoshi Valley">
+                <img src="images/courses/Yoshi-Valley.png" alt="Yoshi Valley">
+            </label>
+            <label class="thumbnail-select gbaCourse">
+                <input type="radio" name="course" id="Boo-Lake" value="Boo Lake">
+                <img src="images/courses/Boo-Lake.png" alt="Boo Lake">
+            </label>
+            <label class="thumbnail-select gbaCourse">
+                <input type="radio" name="course" id="Cheese-Land" value="Cheese Land">
+                <img src="images/courses/Cheese-Land.png" alt="Cheese Land">
+            </label>
+            <label class="thumbnail-select gbaCourse">
+                <input type="radio" name="course" id="Mario-Circuit-GBA" value="Mario Circuit - GBA">
+                <img src="images/courses/Mario-Circuit-GBA.png" alt="Mario Circuit - GBA">
+            </label>
+            <label class="thumbnail-select gbaCourse">
+                <input type="radio" name="course" id="Ribbon-Road" value="Ribbon Road">
+                <img src="images/courses/Ribbon-Road.png" alt="Ribbon Road">
+            </label>
+            <label class="thumbnail-select gbaCourse">
+                <input type="radio" name="course" id="Riverside-Park" value="Riverside Park">
+                <img src="images/courses/Riverside-Park.png" alt="Riverside Park">
+            </label>
+            <label class="thumbnail-select gbaCourse">
+                <input type="radio" name="course" id="Sky-Garden" value="Sky Garden">
+                <img src="images/courses/Sky-Garden.png" alt="Sky Garden">
+            </label>
+            <label class="thumbnail-select gbaCourse">
+                <input type="radio" name="course" id="Snow-Land" value="Snow Land">
+                <img src="images/courses/Snow-Land.png" alt="Snow Land">
+            </label>
+            <label class="thumbnail-select gbaCourse">
+                <input type="radio" name="course" id="Sunset-Wilds" value="Sunset Wilds">
+                <img src="images/courses/Sunset-Wilds.png" alt="Sunset Wilds">
+            </label>
+            <label class="thumbnail-select gcnCourse">
+                <input type="radio" name="course" id="Baby-Park" value="Baby Park">
+                <img src="images/courses/Baby-Park.png" alt="Baby Park">
+            </label>
+            <label class="thumbnail-select gcnCourse">
+                <input type="radio" name="course" id="Daisy-Cruiser" value="Daisy Cruiser">
+                <img src="images/courses/Daisy-Cruiser.png" alt="Daisy Cruiser">
+            </label>
+            <label class="thumbnail-select gcnCourse">
+                <input type="radio" name="course" id="DK-Mountain" value="DK Mountain">
+                <img src="images/courses/DK-Mountain.png" alt="DK Mountain">
+            </label>
+            <label class="thumbnail-select gcnCourse">
+                <input type="radio" name="course" id="Dry-Dry-Desert" value="Dry Dry Desert">
+                <img src="images/courses/Dry-Dry-Desert.png" alt="Dry Dry Desert">
+            </label>
+            <label class="thumbnail-select gcnCourse">
+                <input type="radio" name="course" id="Sherbet-Land" value="Sherbet Land">
+                <img src="images/courses/Sherbet-Land.png" alt="Sherbet Land">
+            </label>
+            <label class="thumbnail-select gcnCourse">
+                <input type="radio" name="course" id="Waluigi-Stadium" value="Waluigi Stadium">
+                <img src="images/courses/Waluigi-Stadium.png" alt="Waluigi Stadium">
+            </label>
+            <label class="thumbnail-select gcnCourse">
+                <input type="radio" name="course" id="Yoshi-Circuit" value="Yoshi Circuit">
+                <img src="images/courses/Yoshi-Circuit.png" alt="Yoshi Circuit">
+            </label>
+            label.thumbnail-select.dsCourse>input:r[id="id-placeholder-$$"
+            value="value-placeholder-$$"]+img[src="images/courses/id-placeholder-$$.png" alt="value-placeholder-$$"]
+            <label class="thumbnail-select dsCourse"><input type="radio" name="" id="id-placeholder-01"
+                    value="value-placeholder-01"><img src="images/courses/id-placeholder-01.png"
+                    alt="value-placeholder-01"></label>
+            <label class="thumbnail-select dsCourse"><input type="radio" name="" id="id-placeholder-02"
+                    value="value-placeholder-02"><img src="images/courses/id-placeholder-02.png"
+                    alt="value-placeholder-02"></label>
+            <label class="thumbnail-select dsCourse"><input type="radio" name="" id="id-placeholder-03"
+                    value="value-placeholder-03"><img src="images/courses/id-placeholder-03.png"
+                    alt="value-placeholder-03"></label>
+            <label class="thumbnail-select dsCourse"><input type="radio" name="" id="id-placeholder-04"
+                    value="value-placeholder-04"><img src="images/courses/id-placeholder-04.png"
+                    alt="value-placeholder-04"></label>
+            <label class="thumbnail-select dsCourse"><input type="radio" name="" id="id-placeholder-05"
+                    value="value-placeholder-05"><img src="images/courses/id-placeholder-05.png"
+                    alt="value-placeholder-05"></label>
+            <label class="thumbnail-select dsCourse"><input type="radio" name="" id="id-placeholder-06"
+                    value="value-placeholder-06"><img src="images/courses/id-placeholder-06.png"
+                    alt="value-placeholder-06"></label>
+            <label class="thumbnail-select dsCourse"><input type="radio" name="" id="id-placeholder-07"
+                    value="value-placeholder-07"><img src="images/courses/id-placeholder-07.png"
+                    alt="value-placeholder-07"></label>
             <div class="stats">
                 <div class="position1">
                     <div class="position-select1">1</div>
@@ -147,12 +254,16 @@
                 </div>
             </div>
             <div class="submit">Submit</div>
-        </form>
-        <div class="footer">
-            <div class="copyright">Copyright</div>
-            <div class="suggestions">Suggestions</div>
-            <div class="coffee">Coffee</div>
-            <div class="github">GitHub</div>
-        </div>
+    </form>
+    <div class="footer">
+        <div class="copyright">Copyright</div>
+        <div class="suggestions">Suggestions</div>
+        <div class="coffee">Coffee</div>
+        <div class="github">GitHub</div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/mk8dx-data-collector.js"></script>
 </body>
+
 </html>

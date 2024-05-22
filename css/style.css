@@ -136,16 +136,19 @@ form {
     width: 90%;
     height: 100%;
     opacity: 50%;
-    display: block;
+    transition: opacity 100ms ease-in-out, transform 100ms ease-in-out, filter 100ms ease-in-out;;
 
     &:hover {
         opacity: 100%;
-        transition: opacity 250ms;
+        transition: opacity 100ms ease-in-out;
     }
 }
 
-.console input[type=radio]:checked + label > img {
-    border: 5px solid gold;
+.console input:checked + img {
+    transform: scale(1.15);
+    opacity: 100%;
+    filter: drop-shadow(0 0 10px black);
+    transition: transform 100ms ease-in-out, filter 100ms ease-in-out;
 }
 
 .build {
@@ -170,10 +173,29 @@ form {
 }
 
 .class-select {
-    background-color: palegoldenrod;
-    font-size: 20px;
-    padding: 10px;
-    border: 5px solid gold;
+    padding: 0px;
+    height: 1fr;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.class-select img {
+    object-fit: contain;
+    width: 90%;
+    height: 100%;
+    opacity: 50%;
+
+    &:hover {
+        opacity: 100%;
+        transition: opacity 250ms;
+    }
+}
+
+.class input:checked + img {
+    opacity: 100%;
+    filter: drop-shadow(0 0 10px black);
+    transition: filter 100ms ease-in-out;
 }
 
 .date {
@@ -189,10 +211,56 @@ form {
 }
 
 .thumbnail-select {
-    background-color: yellowgreen;
-    font-size: 20px;
-    padding: 10px;
-    border: 5px solid forestgreen;
+    padding: 0px;
+    height: 1fr;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.thumbnail-select img {
+    object-fit: contain;
+    width: 90%;
+    height: auto;
+    opacity: 75%;
+    border: 5px solid transparent;
+    mask-image: linear-gradient(135deg, transparent 4%, gold 0),
+        linear-gradient(-135deg, transparent 4%, gold 0),
+        linear-gradient(45deg, transparent 4%, gold 0),
+        linear-gradient(-45deg, transparent 4%, gold 0);
+    mask-position: 0 0, 100% 0, 0 100%, 100% 100%;
+    mask-repeat: no-repeat;
+    mask-size: 51% 51%;
+    transition: opacity 100ms linear, background-color 100ms linear, border 100ms linear;
+
+    &:hover {
+        opacity: 100%;
+        border: 5px solid gold;
+        background-color: gold;
+        mask-image: linear-gradient(135deg, transparent 4%, gold 0),
+                linear-gradient(-135deg, transparent 4%, gold 0),
+                linear-gradient(45deg, transparent 4%, gold 0),
+                linear-gradient(-45deg, transparent 4%, gold 0);
+        mask-position: 0 0, 100% 0, 0 100%, 100% 100%;
+        mask-repeat: no-repeat;
+        mask-size: 51% 51%;
+        transition: opacity 100ms linear, background-color 100ms linear, border 100ms linear, transform 100ms linear;
+    }
+}
+
+.course input:checked + img {
+    border: 5px solid gold;
+    background-color: gold;
+    height: auto;
+    opacity: 100%;
+    transform: scale(1.1);
+    mask-image: linear-gradient(135deg, transparent 4%, gold 0),
+                linear-gradient(-135deg, transparent 4%, gold 0),
+                linear-gradient(45deg, transparent 4%, gold 0),
+                linear-gradient(-45deg, transparent 4%, gold 0);
+    mask-position: 0 0, 100% 0, 0 100%, 100% 100%;
+    mask-repeat: no-repeat;
+    mask-size: 51% 51%;
 }
 
 .stats {

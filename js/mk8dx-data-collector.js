@@ -1,41 +1,41 @@
-$('.course-thumbnail').hide(); 
-$('#snesConsole').click(function (){
-    $('.course-thumbnail').not(':eq(.snesCourses)').hide();
-    $('.snesCourses').show();
+$('.thumbnail-select').hide(); 
+$('#snes-logo').click(function (){
+    $('.thumbnail-select').not(':eq(.snesCourse)').hide();
+    $('.snesCourse').show();
 })
-$('#n64Console').click(function (){
-    $('.course-thumbnail').not(':eq(.n64Courses)').hide();
-    $('.n64Courses').show();
+$('#n64-logo').click(function (){
+    $('.thumbnail-select').not(':eq(.n64Course)').hide();
+    $('.n64Course').show();
 })
-$('#gbaConsole').click(function (){
-    $('.course-thumbnail').not(':eq(.gbaCourses)').hide();
-    $('.gbaCourses').show();
+$('#gba-logo').click(function (){
+    $('.thumbnail-select').not(':eq(.gbaCourse)').hide();
+    $('.gbaCourse').show();
 })
-$('#gcnConsole').click(function (){
-    $('.course-thumbnail').not(':eq(.gcnCourses)').hide();
-    $('.gcnCourses').show();
+$('#gcn-logo').click(function (){
+    $('.thumbnail-select').not(':eq(.gcnCourse)').hide();
+    $('.gcnCourse').show();
 })
-$('#dsConsole').click(function (){
-    $('.course-thumbnail').not(':eq(.dsCourses)').hide();
-    $('.dsCourses').show();
+$('#ds-logo').click(function (){
+    $('.thumbnail-select').not(':eq(.dsCourse)').hide();
+    $('.dsCourse').show();
 })
-$('#wiiConsole').click(function (){
-    $('.course-thumbnail').not(':eq(.wiiCourses)').hide();
-    $('.wiiCourses').show();
+$('#wii-logo').click(function (){
+    $('.thumbnail-select').not(':eq(.wiiCourse)').hide();
+    $('.wiiCourse').show();
 })
-$('#mk7Console').click(function (){
-    $('.course-thumbnail').not(':eq(.mk7Courses)').hide();
-    $('.mk7Courses').show();
+$('#mk7-logo').click(function (){
+    $('.thumbnail-select').not(':eq(.mk7Course)').hide();
+    $('.mk7Course').show();
 })
-$('#tourConsole').click(function (){
-    $('.course-thumbnail').not(':eq(.tourCourses)').hide();
-    $('.tourCourses').show();
+$('#tour-logo').click(function (){
+    $('.thumbnail-select').not(':eq(.tourCourse)').hide();
+    $('.tourCourse').show();
 })
-$('#mk8Console').click(function (){
-    $('.course-thumbnail').not(':eq(.mk8Courses)').hide();
-    $('.mk8Courses').show();
+$('#mk8-logo').click(function (){
+    $('.thumbnail-select').not(':eq(.mk8Course)').hide();
+    $('.mk8Course').show();
 })
-$('#boosterConsole').click(function (){
-    $('.course-thumbnail').not(':eq(.boosterCourses)').hide();
-    $('.boosterCourses').show();
+$('#booster-logo').click(function (){
+    $('.thumbnail-select').not(':eq(.boosterCourse)').hide();
+    $('.boosterCourse').show();
 })
