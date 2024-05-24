@@ -1,0 +1,12 @@
+{
+    "name": "psychedelicseal/mk-dashboard",
+    "description": "A Mario Kart Data Collector & Analyzer",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Psychedelicseal\\MkDashboard\\": "src/"
+        }
+    },
+    "minimum-stability": "stable",
+    "require": {}
+}
